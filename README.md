@@ -1,8 +1,57 @@
 # ScamShield 🛡️
 
+<img src="./assets/home.png" alt="ScamShield Hero Terminal UI" width="100%" />
+
 ScamShield is a modern, AI-powered full-stack application designed to proactively identify and flag fraudulent activities, with a specialized focus on fake job listings and malicious emails.
 
 The platform utilizes machine learning to parse text, extract information from uploaded PDFs and images via OCR, and securely scan authentic Gmail inboxes for potentially harmful phishing attempts using a unified, user-friendly interface.
+
+## 📸 Interface Preview
+<p align="center">
+  <img src="./assets/home.png" alt="ScamShield Home" width="80%" />
+</p>
+<p align="center">
+  <img src="./assets/scanner.png" alt="AI Cyber Scanner Input" width="80%" />
+</p>
+<p align="center">
+  <img src="./assets/inbox.png" alt="Gmail Inbox Telemetry Results" width="80%" />
+</p>
+<p align="center">
+  <img src="./assets/features.png" alt="Security Feature Highlights" width="80%" />
+</p>
+
+## 🌐 Live Deployment URLs
+- **Frontend App:** [https://scam-shield-nine.vercel.app](https://scam-shield-nine.vercel.app)
+- **Backend API:** [https://scamshield-xvcs.onrender.com](https://scamshield-xvcs.onrender.com)
+
+---
+
+## 🎯 Problem Statement
+As digital platforms grow, cybercriminals have become highly sophisticated at exploiting them. Two of the most common and damaging vectors today are **fake job listings** and **spear-phishing emails**. 
+
+Traditional spam filters often miss highly targeted, emotionally manipulative texts. Scammers post seemingly legitimate remote jobs on reputable platforms to harvest Social Security Numbers, exact banking details, or force victims into "advance-fee" hardware scams. Similarly, urgent "Account Suspended" emails continue to bypass basic heuristic filters. 
+
+There is an urgent need for an intelligently trained, on-demand analytical tool that allows everyday people to instantly spot-check suspicious text and files before they become victims of identity theft or financial fraud.
+
+## 👤 The End User
+ScamShield is built for:
+- **Job Seekers:** Actively browsing LinkedIn, Indeed, or remote job boards who want to verify the legitimacy of a recruiter's pitch or an off-platform job application PDF.
+- **Everyday Internet Users:** Who receive suspicious notifications or urgent claims in their inbox and need a second "AI opinion" without having to forward the email anywhere.
+- **Cybersecurity Enthusiasts:** Who want to understand exactly *why* a text is considered dangerous by analyzing the exact top-weighted machine learning signals.
+
+## ⚙️ Working Flow
+
+1. **Input Phase:** The user accesses the frontend interface and provides data via three methods:
+   - Pasting text directly into the Cyber Terminal.
+   - Uploading a Document/Screenshot (PDF, JPG, PNG).
+   - Authenticating via Google OAuth to permit a temporary read of their Gmail inbox.
+2. **Transmission:** The React frontend securely transmits this data (or the OAuth token) via Vercel's proxy to the Python FastAPI backend.
+3. **Extraction & NLP:** If a file is uploaded, the backend uses `EasyOCR` (for images) or `pdfplumber` (for PDFs) to extract raw text. The text is then aggressively cleaned (stripping URLs, special characters, and converting to lowercase).
+4. **AI Inference:** The cleaned text is converted into a vector matrix using a pre-trained `joblib` vectorizer. This vector is fed into highly optimized `scikit-learn` models (e.g., Logistic Regression).
+5. **Signal Identification:** The model evaluates the probability of the text being a scam and mathematically isolates the exact keywords (Integrity Signals) that influenced its decision the most (e.g., "guaranteed", "wiring", "suspended").
+6. **Result Visualization:** The backend returns a JSON payload containing the Verdict, a Confidence Score (%), and the specific Threat Signals. The frontend visually renders this data using a glassmorphic result card and an animated confidence ring.
+
+---
 
 ## 🚀 Key Features
 * **Google Inbox Scanning:** Secure Google OAuth 2.0 integration allows users to permissionlessly scan their last 10 received emails for scam/phishing indicators.
