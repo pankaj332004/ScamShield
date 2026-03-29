@@ -6,20 +6,6 @@ ScamShield is a modern, AI-powered full-stack application designed to proactivel
 
 The platform utilizes machine learning to parse text, extract information from uploaded PDFs and images via OCR, and securely scan authentic Gmail inboxes for potentially harmful phishing attempts using a unified, user-friendly interface.
 
-## 📸 Interface Preview
-<p align="center">
-  <img src="./assets/home.png" alt="ScamShield Home" width="80%" />
-</p>
-<p align="center">
-  <img src="./assets/scanner.png" alt="AI Cyber Scanner Input" width="80%" />
-</p>
-<p align="center">
-  <img src="./assets/inbox.png" alt="Gmail Inbox Telemetry Results" width="80%" />
-</p>
-<p align="center">
-  <img src="./assets/features.png" alt="Security Feature Highlights" width="80%" />
-</p>
-
 ## 🌐 Live Deployment URLs
 - **Frontend App:** [https://scam-shield-nine.vercel.app](https://scam-shield-nine.vercel.app)
 - **Backend API:** [https://scamshield-xvcs.onrender.com](https://scamshield-xvcs.onrender.com)
@@ -130,3 +116,18 @@ This application is optimized for cloud deployment using **Vercel** and **Render
 
 **Note on Google OAuth Deployment:**
 In order for users to log in on your live Vercel URL, you must add both the `FRONTEND_URL` and `FRONTEND_URL/api/auth/callback` to the *Authorized JavaScript origins* and *Authorized redirect URIs* respectively inside the **Google Cloud Console**. When transitioning from the `Testing` phase, make sure to formally Publish your OAuth App so that external users can utilize the inbox scanner.
+
+
+## 📸 Interface Preview
+<p align="center">
+  <img src="./assets/home.png" alt="ScamShield Home" width="80%" />
+</p>
+<p align="center">
+  <img src="./assets/scanner.png" alt="AI Cyber Scanner Input" width="80%" />
+</p>
+<p align="center">
+  <img src="./assets/inbox.png" alt="Gmail Inbox Telemetry Results" width="80%" />
+</p>
+<p align="center">
+  <img src="./assets/features.png" alt="Security Feature Highlights" width="80%" />
+</p>
