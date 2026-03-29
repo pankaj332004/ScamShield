@@ -131,3 +131,11 @@ In order for users to log in on your live Vercel URL, you must add both the `FRO
 <p align="center">
   <img src="./assets/features.png" alt="Security Feature Highlights" width="80%" />
 </p>
+
+---
+
+## 🔮 Future Work & Roadmap
+- **Browser Extension Integration:** Finalizing the `ScamShieldExtension` to provide real-time overlays and proactively block malicious domains before the user even navigates to them.
+- **Advanced NLP Transformers:** Upgrading the current machine learning models to fine-tuned contextual Large Language Models (like BERT) to analyze much deeper linguistic manipulation tactics.
+- **Community Reporting Architecture:** Building a community-verifiable reporting database that allows users to instantly flag newly engineered scams into a global blacklist.
+- **Multi-language Heuristics:** Expanding the `EasyOCR` bounds to accurately scan mixed-language PDFs and images heavily targeted in global phishing campaigns.
