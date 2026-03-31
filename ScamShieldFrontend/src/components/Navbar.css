@@ -144,6 +144,37 @@
   color: var(--danger);
 }
 
+/* Loading State */
+.loading-state {
+  opacity: 0.8;
+  gap: 8px;
+}
+
+.nav-spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--border);
+  border-top-color: var(--accent-cyber);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.loading-text {
+  font-size: 11px;
+  font-family: monospace;
+  color: var(--text-muted);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
 /* Hamburger Menu */
 .hamburger {
   display: none;
