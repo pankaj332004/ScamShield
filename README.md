@@ -45,6 +45,16 @@ ScamShield is built for:
 * **Document Upload & OCR:** Upload standard documents, screenshots (PNG, JPG), or PDFs natively. The engine uses `EasyOCR` and `pdfplumber` to extract text and analyze it in seconds.
 * **Secure CORS Proxying:** End-to-end integration designed securely with Vercel API path rewrites to completely bypass complex CORS infrastructure.
 
+## 💻 Tech Stack
+
+| Category | Technologies |
+| :--- | :--- |
+| **Frontend** | React, Vite, JavaScript, Custom CSS |
+| **Backend** | Python, FastAPI, Uvicorn, Authlib |
+| **AI / Machine Learning** | Scikit-Learn, NumPy, joblib, EasyOCR, pdfplumber |
+| **APIs & Auth** | Google OAuth 2.0, Google Gmail API |
+| **Deployment & Hosting** | Vercel (UI & Proxy), Render (API Web Service) |
+
 ## 🏗️ Architecture Stack
 This repository is formatted as a monorepo consisting of three primary modules:
 
