@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "/openapi.json",
+      "destination": "https://scamshield-xvcs.onrender.com/openapi.json"
+    },
+    {
       "source": "/api/:path*",
       "destination": "https://scamshield-xvcs.onrender.com/:path*"
     }
